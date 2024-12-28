@@ -1,4 +1,4 @@
-import Counter from './Counter';  
+import Counter from '../Inicio/Counter';  
 import SegundoContador from './SegundoContador';    
 
 

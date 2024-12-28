@@ -66,7 +66,14 @@ export const QuintoComponente = () => {
          {arreglo.map(itemLista => <Item key={itemLista.id} nombre={itemLista.nombre} visto={itemLista.visto}></Item>)}
       </ol>
 
+      
 
+    </>
+  );
+};
+
+/** 
+ * codigo a reescribir
       
       <button onClick={() => addTask()}>Agregar Tarea</button>
 
@@ -75,10 +82,7 @@ export const QuintoComponente = () => {
       <p>segundo agregador de tareas </p>
       <br />
       <AddTaskFromChild  agregarTarea={onAgregarTarea}></AddTaskFromChild>
-    </>
-  );
-};
-
+ */
 
 Item.propTypes = {
     nombre: PropTypes.string.isRequired

@@ -1,4 +1,4 @@
-import '../styles/PrimerComponente.css'
+import '../../styles/PrimerComponente.css'
 
 const string = "esto es un texto"
 const numero = 13234

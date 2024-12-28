@@ -1,4 +1,6 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
+import AgregarTarea from "./AgregarTarea";
 
 export const AddTaskFromChild = ({ agregarTarea }) => {
   const [imputValue, setImputValue] = useState("");
@@ -16,7 +18,7 @@ export const AddTaskFromChild = ({ agregarTarea }) => {
   return (
     <form onSubmit={onSubmit}>
       {" "}
-      {/*    se podria poner como 'onSubmit={(event) => onSubmit(event)  pero es solo un parametro y no hace falta*/}
+      {/* se podria poner como 'onSubmit={(event) => onSubmit(event)  pero es solo un parametro y no hace falta*/}
       <input
         type="text"
         placeholder="Ingrese nueva tarea"
@@ -26,5 +28,6 @@ export const AddTaskFromChild = ({ agregarTarea }) => {
     </form>
   );
 };
+ 
 
 export default AddTaskFromChild;
