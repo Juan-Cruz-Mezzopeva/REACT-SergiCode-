@@ -1,17 +1,15 @@
 import { useState } from "react";
 
-export const AgregarTarea = ({ agregarTarea }) => {
-  const [imputValue, setImputValue] = useState("");
-
+export const AgregarTarea = ({ agregarTarea }) => { //{agregarTarea } --> esto es desestructurar la variable min2:09
+  const [inputValue, setImputValue] = useState("");
   const onImputChange = (event) => {
     setImputValue(event.target.value);
-    console.log();
   };
-
   const onSubmit = (event) => {
     event.preventDefault();
+     
     const envio = {
-      nombre: imputValue,
+      nombre: inputValue,
       visto: false,
     };
     agregarTarea((tareas) => [...tareas, envio]);
@@ -24,7 +22,7 @@ export const AgregarTarea = ({ agregarTarea }) => {
       <input
         type="text"
         placeholder="Ingrese nueva tarea"
-        value={imputValue}
+        value={inputValue}
         onChange={onImputChange} //usar onInputChange es igual a usar "(event) => onImputChange(event)" ya que solo tiene un parametro que esta pasando
       />
     </form>

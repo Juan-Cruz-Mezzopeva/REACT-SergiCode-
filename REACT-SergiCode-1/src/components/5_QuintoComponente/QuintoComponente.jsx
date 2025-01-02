@@ -62,6 +62,14 @@ export const QuintoComponente = () => {
  
       <h3>Listado creado dinamicamene con un map</h3>
 
+      <h4>agregado generico de nueva tarea</h4>
+      <button onClick={() => addTask()}>Agregar Tarea</button>
+
+      <h4>Item agregado con prop pasado de padre a hijo</h4>
+      <AgregarTarea agregarTarea = {setArreglo}></AgregarTarea>
+      <br />
+      <h4>agregado de tarea desde el hijo</h4>
+      <AddTaskFromChild  agregarTarea={onAgregarTarea}></AddTaskFromChild>
       <ol>
          {arreglo.map(itemLista => <Item key={itemLista.id} nombre={itemLista.nombre} visto={itemLista.visto}></Item>)}
       </ol>
@@ -75,13 +83,12 @@ export const QuintoComponente = () => {
 /** 
  * codigo a reescribir
       
-      <button onClick={() => addTask()}>Agregar Tarea</button>
+      
 
       <AgregarTarea agregarTarea={setArreglo} ></AgregarTarea>
 
       <p>segundo agregador de tareas </p>
       <br />
-      <AddTaskFromChild  agregarTarea={onAgregarTarea}></AddTaskFromChild>
  */
 
 Item.propTypes = {

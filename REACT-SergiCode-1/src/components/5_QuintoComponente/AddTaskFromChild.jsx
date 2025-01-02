@@ -1,13 +1,10 @@
 import { useState } from "react";
-import PropTypes from 'prop-types';
-import AgregarTarea from "./AgregarTarea";
 
 export const AddTaskFromChild = ({ agregarTarea }) => {
   const [imputValue, setImputValue] = useState("");
 
   const onImputChange = (event) => {
     setImputValue(event.target.value);
-    console.log();
   };
 
   const onSubmit = (event) => {
