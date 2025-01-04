@@ -1,0 +1,11 @@
+body, html {
+    background-color: black;
+    color: white;
+}
+
+nav a {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+
+}
