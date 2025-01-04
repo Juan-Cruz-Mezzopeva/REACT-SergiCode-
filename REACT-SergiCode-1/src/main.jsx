@@ -8,7 +8,9 @@ import { SegundoComponente } from "./components/2_SegundoComponente/SegundoCompo
 import { TercerComponente } from "./components/3_TercerComponente/TercerComponente";
 import { CuartoComponente } from "./components/4_CuartoComponente/CuartoComponente";
 import { QuintoComponente } from "./components/5_QuintoComponente/QuintoComponente";
-//import UsersApp from "./UsersApp";
+import { UserApp } from "./components/6_SextoComponente/UserApp";
+import { SextoComponente } from "./components/6_SextoComponente/SextoComponente";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -20,6 +22,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
      <NavLink to="/TercerComponente">Tercer Componente</NavLink>
      <NavLink to="/CuartoComponente">Cuarto Componente</NavLink>
      <NavLink to="/QuintoComponente">Quinto Componente</NavLink>
+     <NavLink to="/UserApp">User App</NavLink>
+     <NavLink to="/SextoComponente">Sexto Componente</NavLink>
+     
+     
+     
     </nav>
 
       <Routes>
@@ -39,9 +46,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/TercerComponente" element={<TercerComponente />} />
         <Route path="/CuartoComponente" element={<CuartoComponente />} />
         <Route path="/QuintoComponente" element={<QuintoComponente />} />
+        <Route path="/UserApp" element={<UserApp />} />
+        <Route path="/SextoComponente" element={<SextoComponente />} />
+      
       </Routes>
       <br />
-      <a href="./UsersApp">Aplicacion de usuarios</a>
     </BrowserRouter>
   </React.StrictMode>
 );
