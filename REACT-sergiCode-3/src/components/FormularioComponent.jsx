@@ -1,4 +1,5 @@
 import { useForm } from "../hooks/useForm"
+import { useEffect, useRef } from "react"
 
 export const FormularioComponent = () => {
     
@@ -7,7 +8,11 @@ export const FormularioComponent = () => {
       email: '',
       password: ''
   }
-    const {formState, onInputChange} = useForm(initialForm)
+ 
+  const focusRef = useRef() 
+  console.log(focusRef)
+
+  const {formState, onInputChange} = useForm(initialForm)
 
     const {userName, email, password}  = formState
  
@@ -16,6 +21,10 @@ export const FormularioComponent = () => {
       console.log(formState)
     }
 
+    useEffect(() => {
+      focusRef.current.focus()
+    }, [])
+    
     return (   
         <form onSubmit={onSubmit}>
           <div className="form-group">
@@ -32,6 +41,7 @@ export const FormularioComponent = () => {
           <div className="form-group">
             <label htmlFor="email" className="form-label">Email address</label>
             <input 
+                ref={focusRef}
                 type="email" 
                 className="form-control" 
                 name="email" 
