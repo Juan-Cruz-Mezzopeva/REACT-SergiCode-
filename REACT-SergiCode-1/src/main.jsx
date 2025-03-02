@@ -11,7 +11,6 @@ import { QuintoComponente } from "./components/5_QuintoComponente/QuintoComponen
 import { UserApp } from "./components/6_SextoComponente/UserApp";
 import { SextoComponente } from "./components/6_SextoComponente/SextoComponente";
 
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -24,8 +23,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
      <NavLink to="/QuintoComponente">Quinto Componente</NavLink>
      <NavLink to="/UserApp">User App</NavLink>
      <NavLink to="/SextoComponente">Sexto Componente</NavLink>
-     
-     
      
     </nav>
 
